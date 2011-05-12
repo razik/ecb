@@ -80,7 +80,7 @@ The meaning is as follows:
 3. 0 = alpha, 1 = beta, 2 = pre, 3 = nothing \(e.g. \"1.4\"), 4 = . \(e.g. \"1.4.3\"
 4. Subversion after the alpha, beta, pre or .")
 
-(defconst ecb-cedet-required-version-max '(1 0 4 9)
+(defconst ecb-cedet-required-version-max '(1 1 3 0)
   "Maximum version of CEDET currently accepted by ECB.
 See `ecb-required-cedet-version-min' for an explanation.")
 
@@ -165,7 +165,7 @@ If ECB detects a problem it is reported and then an error is thrown."
                      "If you use the Makefile check the variables CEDET before compiling!\n"
                      ))
             (t ""))))
-      (unless (= 0 (length err-msg)) 
+      (unless (= 0 (length err-msg))
         (with-output-to-temp-buffer "*ECB semantic-load problems*"
           (princ "Currently ECB can not be activated cause of the following reason:\n\n")
           (princ err-msg)
@@ -205,7 +205,7 @@ If ECB detects a problem it is reported and then an error is thrown."
                      "with the same CEDET-library-version as you load into Emacs.\n"
                      "If you use the Makefile check the variable CEDET before compiling!\n"))
             (t ""))))
-      (unless (= 0 (length err-msg)) 
+      (unless (= 0 (length err-msg))
         (with-output-to-temp-buffer "*ECB cedet-load problems*"
           (princ "Currently ECB can not be activated cause of the following reason:\n\n")
           (princ err-msg)
